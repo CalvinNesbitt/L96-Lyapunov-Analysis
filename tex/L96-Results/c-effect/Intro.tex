@@ -1,0 +1,46 @@
+\section{Effect of the Time Scale Seperation} \label{section:c-effect}
+
+We have investigated the effect of timescale seperation on the FTLEs and LVs. Specifically, for four values of $c$ we have calculated the backward Lyapunov vectors (BLVs), covariant Lyapunov vectors (CLVS) and Lyapunov exponents (LEs). The parameters used can be found in tables \ref{Model-Parameter-Table} and \ref{Integration-Parameter-Table}.
+
+\begin{table}
+\begin{center}
+\scalebox{0.75}{\begin{tabular}{ |c c c| }
+ 	\hline
+ 	Term & Meaning & Value \\
+ 	\hline
+	$K$ & Number of synoptic scale variables & $36$  \\
+	$J$ & Number of convective scale variables per sector & $10$  \\
+ 	$F_s$ & Synoptic variable forcing & $10$  \\
+ 	$F_f$ & Convective variable forcing & $6$ \\
+ 	$h$ & Coupling strength  & $1$ \\
+ 	$c$ & Time scale separation & Range in $[3.75, 15]$ \\
+ 	$b$ & Relative size of small variables & $\sqrt{J c}$ \\
+ 	\hline
+	\end{tabular}}
+\caption{L96 model parameters.} \label{Model-Parameter-Table}
+\end{center}
+\end{table}
+
+
+\begin{table}
+\begin{center}
+\scalebox{0.75}{\begin{tabular}{ |c c c| }
+ 	\hline
+ 	Term & Meaning & Value \\
+ 	\hline
+ 	$\tau$ & Time between QR decompositions & $10^{-2}$ \\
+ 	$T_A$ & Forward transient integration time & $50.5$ \\
+ 	$T_B$ & Observation integration time & $100$ \\
+ 	$T_C$ & Backward transient integration time & $100$ \\
+ 	\hline
+	\end{tabular}}
+\caption{Integration time parameters.} \label{Integration-Parameter-Table}
+\end{center}
+\end{table}
+
+% Bulk of Section
+
+\input{\patha /c-effect/Spectra.tex}
+\input{\patha /c-effect/Variable-Projection.tex}
+\input{\patha /c-effect/Hyperbolicity.tex}
+\input{\patha /c-effect/Rate-Functions.tex}

@@ -1,0 +1,63 @@
+\subsection{Lyapunov Spectra}
+
+We have calculated the Lyapunov spectra by calculating the growth rate of both the CLVs and BLVs. These are plotted in figures \ref{fig:CLE} and \ref{fig:BLE} respectively whilst the absolute and relative disagreements between the two spectra are plotted in figures \ref{fig:Abs-Disagree} and \ref{fig:Rel-Disagree}. As one would expect, the two spectra agree although there is some discrepancy for the near $0$ exponents.
+
+\begin{figure}[ht]
+
+\centering
+
+\begin{subfigure}{0.4\linewidth}
+	\centering
+    \includegraphics[width=\textwidth, keepaspectratio]{CLE-Spectra}
+    \caption{Lyapunov spectra calculated from CLVs.}
+    \label{fig:CLE}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.4\linewidth}
+	\centering
+    \includegraphics[width=\textwidth, keepaspectratio]{BLE-Spectra}
+    \caption{Lyapunov spectra calculated from BLVs.}
+    \label{fig:BLE}
+\end{subfigure}
+
+\caption{Lyapunov spectra.}
+\label{fig:Spectra}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+
+\begin{subfigure}{0.4\linewidth}
+    \includegraphics[width=\textwidth, keepaspectratio]{LE-Disagreement-Abs.pdf}
+    \caption{Absolute disagreement between the CLV and BLV spectra.}
+    \label{fig:Abs-Disagree}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.4\linewidth}
+    \includegraphics[width=\textwidth, keepaspectratio]{LE-Disagreement-Rel.pdf}
+    \caption{Relative disagreement between the CLV and BLV spectra.}
+    \label{fig:Rel-Disagree}
+\end{subfigure}
+
+\caption{Disagreement between spectra.}
+\label{fig:Errors}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}{0.4\linewidth}
+	\centering
+    \includegraphics[width=\textwidth, keepaspectratio]{Variance-cvb}
+    \caption{Comparison of FTCLE and FTBLE Variance.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.4\linewidth}
+	\centering
+    \includegraphics[width=\textwidth, keepaspectratio]{Variance-h-comparison}
+    \caption{Effect of coupling on varaince.}
+\end{subfigure}
+
+\caption{FTLE Variance.}
+\end{figure}

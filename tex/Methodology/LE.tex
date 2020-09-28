@@ -1,0 +1,32 @@
+\subsection{Basics of the Mathematical Theory of Lyapunov Exponents}
+
+We will work with a dynamical system that is the flow determined by the ODE
+
+\begin{align}
+\dv{u}{t} = g(u). \label{eqn: Dyn-Sys}
+\end{align}
+
+The intuitive idea of Lyapunov exponents (LE) and their corresponding vectors is that at each point along the trajectory of \ref{eqn: Dyn-Sys} we can distinguish directions along which a perturbation will either grow or contract. The LE is then the exponential rate of expansion or contraction. The direction along which we perturb would be the corresponding Lyapunov vector (LV).\\
+
+Formally LEs are defined via the multiplicative theorem of \cite{Oseledets1968}:
+
+\begin{thm}[The Multiplicative Ergodic Theorem] \label{Oseldets}
+Let $\mu$ be $f$ invariant borel measure. Then for a.e. $x$ you have $\lambda_1(x), \dots, \lambda_{n(x)}(x)$ with respective multiplicities $m_1, \dots, m_n$ such that:
+\begin{enumerate}
+\item For every tangent vector $v$, $\lambda(x,v) = \lambda_i$ for some $i$.\
+\item $\dim(M) = \sum m_i$.\
+\item $\sum m_i(x)\lambda(x) = \lim_{n \to \infty} \frac{1}{n} \log \abs{Df^n_x}$.
+\end{enumerate}
+\end{thm}
+
+If $f$ is a diffeomorphism (invertible) you can decompose tangent space $T_x M$:
+
+\begin{eqnarray}
+T_x M = E_1 \oplus \dots \oplus E_n
+\end{eqnarray}
+
+where $\dim E_i = m_i$ and $\lambda(x,v) = \lambda_i$ for $v \in E_i$. The pairs $\{\lambda_i, m_i\}$ are the \textbf{Lyapunov exponents} along with their corresponding multiplicity. Note that \textbf{if your system is ergodic then LE are constant a.e.}.\\
+
+Our goal is to find the $\lambda_i$ along with the corresponding tangent space partition $E_i$. This partition will be defined by a basis for the tangent space.\\
+
+We will find two different set of basis vectors corresponding to the $E_i$: covariant Lyapunov vectors (CLVs) and backward Lyapunov vectors (BLVs). CLVs are covariant with the linearised dynamics whilst BLVs are orthogonal to one another.

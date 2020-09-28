@@ -1,0 +1,29 @@
+\subsection{Assesing Hyperbolicity}
+
+In figure \ref{fig:h-effect-Angle} we have plotted the effect of $c$ on the angle between the stable and unstable manifolds. We see in all cases this angle is not bounded away from $0$ indicating violations of hyperbolicity. The general trend is for and increase in $c$ to decrease the violations of hyperbolicity, whilst for the parameter $c=11.25$ bucks this trend. We intend to investigate this further.
+
+In figure \ref{fig:h-effect-kd-pdf} we have plotted the effect of $c$ on the pdf number of positive FTCLEs. We find $c$ does not have such a large effect but note this may not be the best measure as many of the FTCLEs are near $0$ as shown in figure \ref{fig:h-effect-CLE}. We note that it sometimes FTLCEs associated with very negative CLVs that become positive due to the corresponding large variance (see figure \ref{fig:h-Variance}). An example of this is shown in \ref{fig:h-effect-pos-neg-example} where we have plotted the timeseries of the FTCLE associated with the most negative CLV. In red we have highlighted the points where it becomes positive, an indication of non-uniform hyperbolicity.
+
+% Angle Between Manifolds
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{h-effect/Manifold-Angle}
+\caption{The effect of the parameter $c$ on the angle between the stable and unstable manifolds. We see in all cases this angle is not bounded away from $0$ whilst the general trend is for and increase in $c$ to decrease the violations of hyperbolicity.}
+\label{fig:h-effect-Angle}
+\end{figure}
+
+% Variation in the Number of Poistive FTCLEs
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{h-effect/No-Pos-FTCLE-PDF}
+\caption{The effect of $c$ on the pdf number of positive FTCLEs. We find $c$ does not have such a large effect but note this may not be the best measure as many of the FTCLEs are near $0$}
+\label{fig:h-effect-kd-pdf}
+\end{figure}
+
+% Example of Negative FTCLE becoming Positive
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{h-effect/FTCLE-396-Time-Series}
+\caption{Timeseries of the FTCLE associated with the most negative CLV. In red we have highlighted the points where it becomes positive, an indication of non-uniform hyperbolicity.}
+\label{fig:h-effect-pos-neg-example}
+\end{figure}

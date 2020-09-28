@@ -1,0 +1,11 @@
+\subsection{Fluctuations of Lyapunov Exponents} \label{section: FTLE-Fluctuations}
+
+Following \cite{Politi2014} we are interested in understanding inhomogeneity in the attractor of the Lorenz $96$ model. In particular how the stability properties change throught the attractor or to be more concrete how the FTLEs fluctuate. As noted in \cite{Politi2014} as the finite averaging time $\tau$ is increased each FTLE time series will fluctuate less and less around its corresponding mean value (the global LE). We can invoke the theory of large deviations to propose the existence of a rate function in the large $\tau$ limit
+
+\begin{align}
+    I(\lambda) = \lim _{\tau \to \infty} - \frac{P(\lambda, \tau)}{\tau} \label{rate}
+\end{align}
+
+where $P(\lambda, \tau)$ is the pdf of the FTLEs averaged over a time $\tau$.\\
+
+We have approximated $P(\lambda, \tau)$ using a simple Kernel Density Estimation technique and then used \ref{rate} to evaluate the rate function directly.

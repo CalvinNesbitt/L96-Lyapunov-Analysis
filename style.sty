@@ -1,0 +1,74 @@
+\ProvidesPackage{style}
+
+% Margin Specification
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={160mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+% Read Pacakages
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage[section]{placeins} %Floats restricted to sections
+\usepackage{titlesec} % Page break between sections
+%\newcommand{\sectionbreak}{\clearpage}   % Page break between sections
+\usepackage{hyperref} % Clickable references
+\usepackage{siunitx} % SI units typeset
+
+
+% Removing paragraph indents
+{\setlength{\parindent}{0cm}
+
+% Header & Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C,C]{Lyapunov Exponents in Lorenz $96$}
+\fancyfoot[C,C]{\thepage}
+
+% Definition Environments
+\theoremstyle{plain}
+  \newtheorem{thm}{Theorem}[subsection]
+  \newtheorem{lem}[thm]{Lemma}
+  \newtheorem{prop}[thm]{Proposition}
+  \newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+  \newtheorem{defn}[thm]{Definition}
+  \newtheorem{exmp}[thm]{Example}
+
+\theoremstyle{remark}
+	\newtheorem*{rem}{Remark}
+	\newtheorem*{note}{Note}
+
+% To do Notes
+\usepackage{xargs} % Use more than one optional parameter in a new commands
+\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+% Custom Commands %\newcommand{\name}[num]{definition}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\mdv}[1]{\frac{D #1}{Dt}} %Material derivative
+\newcommand{\fix}[2]{\left( #1 \right)_{#2}} %Derivative with fixed variable
+
+%Operators
+\DeclareMathOperator{\divtext}{div}

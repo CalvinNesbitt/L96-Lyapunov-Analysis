@@ -1,0 +1,31 @@
+\subsection{Assessing Hyperbolicity}
+
+In figure \ref{fig:c-effect-Angle} we have plotted the effect of $c$ on the angle between the stable and unstable manifolds. We see in all cases this angle is not bounded away from $0$ indicating violations of hyperbolicity. The general trend is for and increase in $c$ to decrease the violations of hyperbolicity, however the angle for $c=11.25$ bucks this trend. This is worth looking at further, to see if it is just the parameter choice or nearby ones also.\\
+
+In figure \ref{fig:c-effect-kd-pdf} we have plotted the effect of $c$ on the pdf number of positive FTCLEs. We find $c$ does not have a noticable effect.\\
+
+We note that it not just the near $0$ FTLEs that fluctuate around $0$. The FTLCEs associated with very negative CLVs can also become positive due to their  large variance (see figure \ref{fig:c-Variance}). An example of this is shown in figure \ref{fig:c-effect-pos-neg-example} where we have plotted the timeseries of the FTCLE associated with the most negative CLV. In red we have highlighted the points where it becomes positive, an indication of non-uniform hyperbolicity.
+
+% Angle Between Manifolds
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{c-effect/Manifold-Angle}
+\caption{The effect of the parameter $c$ on the angle between the stable and unstable manifolds. We see in all cases this angle is not bounded away from $0$ whilst the general trend is for an increase in $c$ to decrease the violations of hyperbolicity.}
+\label{fig:c-effect-Angle}
+\end{figure}
+
+% Variation in the Number of Poistive FTCLEs
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{c-effect/No-Pos-FTCLE-PDF}
+\caption{The effect of $c$ on the pdf number of positive FTCLEs.}
+\label{fig:c-effect-kd-pdf}
+\end{figure}
+
+% Example of Negative FTCLE becoming Positive
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth, keepaspectratio]{c-effect/FTCLE-396-Time-Series}
+\caption{Timeseries of the FTCLE associated with the most negative CLV. In red we have highlighted the points where it becomes positive.}
+\label{fig:c-effect-pos-neg-example}
+\end{figure}

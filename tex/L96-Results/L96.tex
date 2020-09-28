@@ -1,0 +1,10 @@
+\section{The Two Scale Lorenz $96$ Model} \label{section: L96-Model}
+
+The two scale Lorenz 96 model mimics the evolution of two scale separated atmospheric variables on a latitudinal ring. Following \cite{Carlu2019} we write the two layer Lorenz 96 model explicitly as
+
+\begin{align}
+\dv{x_k}{t} &= x_{k-1} \left(x_{k+1} - x_{k-2} \right) -x_k + F_s - \frac{hc}{b} \Sigma_{j} y_{k, j} \label{slow-variables}\\
+\dv{}{t} y_{k,j} &= cb y_{k, j+1} \left(y_{k, j-1} - y_{k, j + 2} \right) - c y_{k, j} + \frac{c}{b} F_f + \frac{hc}{b} x_k. \label{fast-variables}
+\end{align}
+
+Here \ref{slow-variables} represents the time evolution of a spatially large, slow variable that is designed to model a synoptic scale process whilst \ref{fast-variables} represents the evolution a smaller, fast variable that models convective motions.\\

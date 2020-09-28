@@ -1,0 +1,32 @@
+\subsection{The Ginelli Algorithm} \label{section: Ginelli-Alg}
+
+The dynamics of a perturbation $\delta u$ are governed by the linearised dynamics of \ref{eqn: Dyn-Sys} often called the \textbf{tangent linear equation}:
+
+\begin{align}
+\dv{\delta u}{t} = J(u, t) \delta u \label{tangent-linear-eqn}
+\end{align}
+
+Following \cite{Ginelli2007} the way in which we have found the LEs and LVs is by solving \ref{eqn: Dyn-Sys} and \ref{tangent-linear-eqn} simultaneously whilst keeping track of local rates of growth in different directions.\\
+
+To be more specific BLVs and the corresponding finite time backward Lyapunov exponents (FTBLEs) are found by implementing the so called Benettin steps:
+
+\newcounter{algo}
+
+\begin{enumerate}
+\item We integrate the matrix equation corresponding to \ref{tangent-linear-eqn} $\dv{}{t} \vb{M}(t) = \vb{J}(\vb{u}) \vb{M}(t_0)$ numerically, for some time $\tau$ with initial condition $\epsilon \vb{I} _3$. This gives us $\vb{M}(\tau)$. Note that we have to integrate \ref{eqn: Dyn-Sys} simultaneously in order to evolve the jacobian.
+\item We perform a $QR$ decomposition $\vb{M}(\tau) = \vb{QR}$.
+\item We repeat the above with the $Q$ matrices now providing the initial condition. Eventually these $Q$'s will converge to the BLVs.
+\item Moreover, at each $QR$ step we store the FTBLEs as $\tilde{\lambda}_i ^B (t_{k \tau})= \frac{1}{\tau} \log(\vb{R}_{ii})$ for $i = 1, 2, \ldots n$.
+\item At the end of the process we estimate the LEs as the mean value of the FTBLE time series.
+\setcounter{algo}{\value{enumi}}
+\end{enumerate}
+
+From here the basic idea to find the CLVs is to make use of the following:
+
+\begin{enumerate}
+\setcounter{enumi}{\value{algo}}
+\item We can expand the CLVs in a basis of BLVs, $\vb{\Gamma} = \vb{Q A^-}$.
+\item The stored $\vb{R}$s from the Benettin steps will map the coefficient matrices $\vb{A}^-$ to one another (with some stretching), i.e. $\vb{R A}^- (t_{n \tau}) = \vb{C A}^- (t_{(n+1) \tau})$, where $\vb{C}$ is a diagonal matrix.
+\item If one keeps pushing the $\vb{A}^-$'s with stored $\vb{R}$s they will eventually converge to the real coefficient matrices. Since we have the BLVs we can then recover the CLVs.
+\item The FTCLEs are then given by $\tilde{\lambda}_i ^C = \frac{1}{\tau} \log(\vb{C}_{ii})$ for $i = 1, 2, \ldots n$. As with the FTBLEs, their average values give the LEs.
+\end{enumerate}
